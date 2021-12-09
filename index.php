@@ -9,15 +9,30 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
     <link href="style1.css" rel="stylesheet">
-    <script href="main.js"></script>
+    <script src="main.js"></script>
 </head>
 
 <body>
 
     <div class="nav">
-        <label class="brand">ShareTheRide!</label>
-        <div class="navlinks">
-            <a href="#Login/Signup">Login/Signup</a>
+        <input type="checkbox" id="nav-check">
+          <div class="nav-header">
+            <div class="nav-title" id="brand">
+              <a style="text-decoration: none;" href="index.php">ShareTheRide!</a>
+            </div>
+          </div>
+
+          <div class="nav-btn">
+            <label for="nav-check">
+              <span></span>
+              <span></span>
+            </label>
+          </div>
+      
+        <div style="margin-top: -46.4px;" class="nav-links">
+          <a href="products.html">Login</a>
+          <a href="about.html">About Us</a>
+          <a href="#contactus">Contact Us</a>
         </div>
     </div>
 
