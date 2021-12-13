@@ -1,7 +1,7 @@
 * {
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
+    font-family: Outfit, sans-serif;
+    font-kerning: normal;
 
     -webkit-user-select: none;
     -khtml-user-select: none;
@@ -11,23 +11,15 @@
     user-select: none;
 }
 
-html {
-    background-color: #fafafa;
-    font-family: Outfit, sans-serif;
+body {
+    margin: 0px;
 }
 
-#brand {
-    font-weight: 900;
-    font-size: 30px;
-    background-color: white;
-    background-image: linear-gradient(45deg, #a56de2, #de3e80);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -moz-background-clip: text;
-    -moz-text-fill-color: transparent;
-    -ms-background-clip: text;
-    -ms-text-fill-color: transparent;
+html {
+    background-color: #fafafa;
 }
+
+/* Navigationbar starts here */
 
 .nav {
     height: 70px;
@@ -37,7 +29,8 @@ html {
     width: 100%;
     background-color: #fafafa;
     position: fixed;
-    border-bottom: 2px #d4d4d4 solid;
+    top: 0;
+    border-bottom: 1px #d4d4d4 solid;
 }
   
 .nav > .nav-header {
@@ -70,7 +63,7 @@ html {
 }
   
 .nav > .nav-links > a:hover {
-    color: #de3e80;
+    color: #EC407A;
     background-size: 100%;
     border-top-left-radius: 15px;
     border-bottom-left-radius: 15px;
@@ -119,7 +112,7 @@ html {
 }
 
 .nav > .nav-links {
-    position: fixed;
+    position: absolute;
     display: flexbox;
     width: 100%;
     padding-left: 10px;
@@ -152,5 +145,57 @@ html {
 .nav > #nav-check:checked ~ .nav-links {
     height: calc(100vh - 50px);
     overflow-y: auto;
+    }
+}
+
+#brand > a {
+    font-weight: 400;
+    font-size: 30px;
+    color: #EC407A;
+    text-decoration: none;
+    letter-spacing: -2.5px;
+}
+
+#brand > a:hover {
+    color: #F06292;
+    text-decoration: none;
+}
+
+/* Home page's main content starts from here */
+
+.bg1 {
+    width: 100%;
+    margin: auto;
+    margin-top: 70px;
+    padding: 50px;
+    background-color: #FCE4EC;
+    color: #F06292;
+}
+
+.bg1 > h1 {
+    font-size: 40px;
+    font-weight: 900px;
+    text-align: center;
+}
+
+/*@media only screen and (min-width: 650px) {
+    .bg1 {
+        width: 98.5%;
+    }
+}*/
+
+@media only screen and (max-width: 650px) {
+    .bg1 {
+        padding: 30px;
+    }
+
+    .bg1 > h1 {
+        font-size: 25px;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    .bg1 > h1 {
+        text-align: center;
     }
 }
