@@ -18,7 +18,7 @@
         <input type="checkbox" id="nav-check">
           <div class="nav-header">
             <div class="nav-title" id="brand">
-              <a style="text-decoration: none;" href="index.php">ShareTheRide!</a>
+              <a style="text-decoration: none;" href="index.php">ShareThe Ride!</a>
             </div>
           </div>
 
@@ -34,6 +34,10 @@
           <a href="about.html">About Us</a>
           <a href="#contactus">Contact Us</a>
         </div>
+    </div>
+
+    <div class="bg1">
+      <h1>Hop in. Crack a window. Let’s get back out there.</h1>
     </div>
 
 </body>
