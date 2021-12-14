@@ -61,7 +61,7 @@ html {
     font-weight: 700;
     letter-spacing: -1.5px;
     text-decoration: none;
-    color: #424242;
+    color: #212121;
 }
   
 .nav > .nav-links > a:hover {
@@ -164,19 +164,22 @@ html {
 /* Home page's main content starts from here */
 
 .bg1 {
-    width: 98%;
+    width: 100%;
     margin: auto;
-    margin-top: 85px;
-    padding: 50px;
-    border-radius: 30px;
-    border: 3px solid #F8BBD0;
-    background-color: #FCE4EC;
-    color: #F06292;
+    margin-top: 70px;
+    padding: 13%;
+    border-bottom: 5px solid #EC407A;
+    background-image: linear-gradient(rgba(0,0,0,0.6) , rgba(0,0,0,0.6)), url(assets/Rear\ view\ from\ backseat\ of\ driver\ and\ passenger\ in\ car.svg);
+    background-position: center;
+    background-size:cover;
+    background-repeat: no-repeat;
+    
 }
 
 .bg1 > h1 {
+    color: white;
     font-size: 45px;
-    font-weight: 900;
+    font-weight: 800;
     text-align: center;
     letter-spacing: -3px;
 }
@@ -184,7 +187,6 @@ html {
 @media only screen and (max-width: 650px) {
     .bg1 {
         padding: 30px;
-        width: 95%;
     }
 
     .bg1 > h1 {
@@ -221,10 +223,10 @@ html {
 }
 
 @media screen and (min-width: 666px) {
-    .test > h2 {
+    .sax > h2 {
         display: flexbox;
         margin-right: 10%;
-        margin-top: -35%;
+        margin-top: -26%;
         text-align: right;
         letter-spacing: -6px;
         color: #212121;
@@ -234,7 +236,7 @@ html {
 }
 
 @media screen and (max-width: 665px) {
-    .test > h2 {
+    .sax > h2 {
         
         text-align: right;
         letter-spacing: -3px;
@@ -243,7 +245,7 @@ html {
 }
 
 @media screen and (max-width: 650px) {
-    .test > h2 {
+    .sax > h2 {
         margin-top: -20px;
         text-align: center;
         letter-spacing: -2.5px;
