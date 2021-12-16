@@ -22,6 +22,7 @@ body {
 
 html {
     background-color: white;
+    scroll-behavior: smooth;
 }
 
 /* Navigationbar starts here */
@@ -283,6 +284,56 @@ html {
     .rightheading > h2 > b {
         font-weight: 500;
     }
+}
+
+#contactus {
+    display: block;
+}
+
+.bottom-container {
+    display: flexbox;
+    position: relative;
+    width: 100%;
+    padding: 50px;
+    margin: auto;
+    text-align: center;
+    border-top: 2px solid #757575;
+    background-color: #fafafa;
+}
+
+.bottom-container > p {
+    text-align: center;
+    font-size: 25px;
+    font-weight: 700;
+    letter-spacing: -1.5px;
+    color: #EC407A;
+}
+
+.bottom-container > span > label {
+    display: block;
+    position: relative;
+    padding: 20px;
+}
+
+i {
+    padding: 10px;
+    font-size: 25px;
+}
+
+.fas , .fab {
+    color: black;
+}
+
+.fa-envelope:hover {
+    color: #EF5350;
+}
+
+.fa-github:hover {
+    color: #AB47BC;
+}
+
+.fa-telegram:hover {
+    color: #42A5F5;
 }
 
 /* For signup and login page */
