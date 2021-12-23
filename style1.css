@@ -21,7 +21,7 @@ body {
 }
 
 html {
-    background-color: white;
+    background-image: linear-gradient(180deg, white,#FAFAFA);
     scroll-behavior: smooth;
 }
 
@@ -155,15 +155,22 @@ html {
 }
 
 #brand > a {
+    background-image: linear-gradient(180deg, #EC407A, #E91E63);
     font-weight: 900;
     font-size: 30px;
-    color: #EC407A;
     text-decoration: none;
     letter-spacing: -2px;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+    -ms-background-clip: text;
+    -ms-text-fill-color: transparent;
 }
 
 #brand > a:hover {
-    color: #212121;
+    background-image: linear-gradient(180deg, #424242, #212121);
     text-decoration: none;
 }
 
@@ -337,49 +344,87 @@ i {
 }
 
 /* For signup and login page */
-
 .loginui {
     display: block;
     position: relative;
     box-sizing: border-box;
     width: 30%;
-    background-color: white;
+    background-image: linear-gradient(180deg, white, #FAFAFA);
     border: 1px solid #d4d4d4;
-    border-radius: 10px;
+    border-radius: 8px;
     padding-left: 50px;
     padding-right: 50px;
-    
     margin: 5% auto 10% auto;
 }
 
+@media screen and (max-width: 599px) {
+    .loginui {
+        border: none;
+        padding-left: 0px;
+        padding-right: 0px;
+        width: 80%;
+    }
+}
+
 .loginui > h1 {
-    color: #EC407A;
+    background-image: linear-gradient(180deg, #EC407A, #E91E63);
+    color: #FAFAFA;
+    border-radius: 8px;
     font-weight: 900;
     font-size: 35px;
     letter-spacing: -2px;
-    text-align: left;  
+    text-align: center;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+    -ms-background-clip: text;
+    -ms-text-fill-color: transparent;  
+}
+
+@media screen and (max-width: 385px) {
+    .loginui > h1 {
+        font-size: 34.5px;
+        letter-spacing: -1.5px;
+    }
+}
+
+@media screen and (max-width: 285px) {
+    .loginui > h1 {
+        font-size: 30px;
+        letter-spacing: -1px;
+    }
 }
 
 .loginui > p {
     letter-spacing: -2px;
     font-size: 25px;
     font-weight: 500;
+    text-align: center;
 }
 
-.loginui > label {
-    display: inline-flex;
-    color: #757575;
-    font-size: 15px;
-    font-weight: 500;
-    letter-spacing: -.5px;
+@media screen and (max-width: 385px) {
+    .loginui > p {
+        font-size: 24.5px;
+        letter-spacing: -1.5px;
+    }
+}
+
+@media screen and (max-width: 285px) {
+    .loginui > p {
+        font-size: 20px;
+        letter-spacing: -1px;
+    }
 }
 
 .loginui > input {
     width: 100%;
-    border-radius: 10px;
+    border-radius: 8px;
+    background-image: linear-gradient(180deg, white,#FAFAFA);
     border: 1px solid #d4d4d4;
     padding: 3%;
-    margin-bottom: 5%;
+    margin-bottom: 8%;
 }
 
 input:hover {
@@ -391,23 +436,30 @@ input:focus {
     border: 1px solid #EC407A;
 }
 
+@media screen and (max-width: 385px) {
+    .loginui > input {
+        padding: 5%;
+    }
+}
+
 button {
     display: flexbox;
-    background-color: #EC407A;
     color: white;
     border: none;
     margin: 10px 0 30px 0;
-    padding: 12px;
+   
     font-size: 15px;
     font-weight: 700;
 }
 
 .gobackbtn {
-    padding: 12px;
-    background-color: #212121;
-    color: white;
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
+    padding: 11px;
+    background-color: rgba(0,0,0,0);
+    color: #424242;
+    border: 1px solid #d4d4d4;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    
 }
 
 .gobackbtn , .signupbtn {
@@ -416,16 +468,18 @@ button {
 }
 
 .gobackbtn:hover {
-    background-color: #424242;
+    background-image: linear-gradient(180deg,#FAFAFA, #F5F5F5);
 }
 
 .signupbtn {
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
+    padding: 12px;
+    background-image: linear-gradient(180deg, #F06292, #EC407A);
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
 }
 
 .signupbtn:hover {
-    background-color: #F06292;
+    background-image: linear-gradient(180deg,#EC407A, #E91E63);
 }
 
 .clearfix::after {
