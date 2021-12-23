@@ -1,6 +1,7 @@
 * {
     box-sizing: border-box;
     font-family: Inter, sans-serif;
+    scroll-behavior: auto;
 
     font-kerning: normal;
     -webkit-font-smoothing: antialiased;
@@ -16,13 +17,13 @@
     user-select: none;
 }
 
-body {
-    margin: 0px;
+html {
+    background-color: #FAFAFA;
 }
 
-html {
-    background-image: linear-gradient(180deg, white,#FAFAFA);
-    scroll-behavior: smooth;
+body {
+    margin: 0;
+    padding: 0;
 }
 
 /* Navigationbar starts here */
@@ -298,33 +299,39 @@ html {
 }
 
 .bottom-container {
-    display: flexbox;
+    display: block;
     position: relative;
     width: 100%;
-    padding: 50px;
+    padding: 5px;
     margin: auto;
     text-align: center;
     border-top: 2px solid #757575;
     background-color: #fafafa;
 }
 
+.bottom-container > span > label {
+    display: block;
+    position: relative;
+    padding: 20px;
+    float: left;
+}
+
 .bottom-container > p {
-    text-align: center;
+    float: right;
     font-size: 25px;
     font-weight: 700;
     letter-spacing: -1.5px;
     color: #EC407A;
 }
 
-.bottom-container > span > label {
-    display: block;
-    position: relative;
-    padding: 20px;
-}
-
 i {
+    text-align: right;
     padding: 10px;
     font-size: 25px;
+}
+
+i:hover {
+    cursor: pointer;
 }
 
 .fas , .fab {
@@ -349,7 +356,7 @@ i {
     position: relative;
     box-sizing: border-box;
     width: 30%;
-    background-image: linear-gradient(180deg, white, #FAFAFA);
+    background-color: #FAFAFA;
     border: 1px solid #d4d4d4;
     border-radius: 8px;
     padding-left: 50px;
