@@ -34,10 +34,14 @@ body {
     padding-left: 10px;
     padding-right: 10px; 
     width: 100%;
-    background-image: linear-gradient(180deg, #FAFAFA, #F5F5F5);
+    box-shadow: 0px 1px 10px rgba(0,0,0,0.1);
+    background-image: linear-gradient(180deg, rgba(255,255,255,0.75), rgba(245,245,245,0.75)); 
     position: fixed;
     top: 0;
+    z-index: 1;
     border-bottom: 1px #d4d4d4 solid;
+    backdrop-filter: blur(35px);
+    -webkit-backdrop-filter: blur(35px);
 }
   
 .nav > .nav-header {
@@ -124,15 +128,16 @@ body {
     width: 100%;
     padding-left: 10px;
     padding-top: 50px; 
-    background-image: linear-gradient(180deg, #F5F5F5, #EEEEEE);
+    background-image:  linear-gradient(180deg, #FAFAFA, #F5F5F5);
     font-weight: 500;
     font-size: 20px;
     text-align: left;  
     height: 5%;
-    transition: all 0.4s ease-in-out;
     overflow: hidden;
+    transition: all .5s ease;
     top: 116.5px;
     left: 0px;
+    z-index: 0;
 }
 
 .nav > .nav-links > a {
@@ -169,6 +174,7 @@ body {
 #brand > a:hover {
     background-image: linear-gradient(180deg, #424242, #212121);
     text-decoration: none;
+    transition: all .5s ease;
 }
 
 /* Home page's main content starts from here */
@@ -182,15 +188,21 @@ body {
     background-position: center;
     background-size:cover;
     background-repeat: no-repeat;
-    
 }
 
 .bg1 > h1 {
-    color: white;
+    background-image: linear-gradient(45deg, white, #FAFAFA, #F5F5F5);
     font-size: 55px;
     font-weight: 700;
     text-align: center;
     letter-spacing: -3px;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+    -ms-background-clip: text;
+    -ms-text-fill-color: transparent;
 }
 
 @media only screen and (max-width: 650px) {
@@ -210,6 +222,131 @@ body {
 @media only screen and (max-width: 550px) {
     .bg1 > h1 {
         text-align: center;
+    }
+}
+
+.bg1 > .ride-search-container {
+    content: "";
+    display: table;
+    clear: both;
+    overflow: hidden;
+    width: 100%;
+    margin: auto;
+    padding: 10px;
+    border: 2px solid #424242;
+    border-radius: 20px;
+    background-image:  linear-gradient(180deg, rgba(255,255,255,0.7), rgba(245,245,245,0.7));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+@media only screen and (max-width: 650px) {
+    .bg1 > .ride-search-container {
+        border: none;
+        background-image: none;
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
+    }
+}
+
+.bg1 > .ride-search-container > .content-width {
+    padding: 10px;
+    text-align: center;
+    width: 95%;
+    margin: 0 auto;
+}
+
+.bg1 > .ride-search-container > .content-width > label > span {
+    margin-left: 5px;
+    margin-right: 5px;
+    color: #d4d4d4;
+    font-weight: 200;
+}
+
+@media only screen and (max-width: 908px) {
+    .bg1 > .ride-search-container > .content-width > label > span {
+        display: none;
+    }
+}
+
+.bg1 > .ride-search-container > .content-width > input {
+    padding: 10px;
+    text-align: center;
+    font-weight: 500;
+    font-size: 15px;
+    background-color: rgba(0,0,0,0);
+    margin: auto;
+    border: 1px solid #d4d4d4;
+    border-radius: 10px;
+    background-image:  linear-gradient(180deg, rgba(255,255,255,0.9), rgba(245,245,245,0.9));
+    box-shadow: 0px 1px 5px rgba(0,0,0,0.1);
+    outline: none;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.bg1 > .ride-search-container > .content-width > input:hover {
+    outline: 2px solid #F48FB1;
+    transition: all .5s ease-in-out;
+}
+
+.bg1 > .ride-search-container > .content-width > input:focus {
+    outline: 2px solid #F06292;
+    transition: all .5s ease-in-out;
+}
+
+.bg1 > .ride-search-container > .content-width > button {
+    display: inline-block;
+    padding: 10px;
+    cursor: pointer;
+    text-align: center;
+    font-weight: 500;
+    font-size: 15px;
+    background-image:  linear-gradient(180deg, rgba(255,255,255,0.7), rgba(245,245,245,0.7));
+    margin: auto;
+    border: 1px solid #d4d4d4;
+    border-radius: 10px;
+    box-shadow: 0px 1px 5px rgba(0,0,0,0.1);
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(30px);
+}
+
+@media only screen and (max-width: 860px) {
+    .bg1 > .ride-search-container > .content-width > input{
+        margin-block: 5px;
+        width: 60%;
+    }
+
+    .bg1 > .ride-search-container > .content-width > button {
+        margin-top: 5px;
+        width: 60%;
+    }
+}
+
+@media only screen and (max-width: 560px) {
+    .bg1 > .ride-search-container > .content-width > input {
+        margin-block: 10px;
+    }
+}
+
+@media only screen and (max-width: 420px) {
+    .bg1 > .ride-search-container > .content-width > input{
+        padding: 12px;
+        font-size: 12px;
+        width: 80%;
+    }
+
+    .bg1 > .ride-search-container > .content-width > button {
+        margin-top: 5px;
+        width: 80%;
+    }
+
+}
+
+@media only screen and (max-width: 300px) {
+    .bg1 > .ride-search-container > .content-width > input{
+        padding: 10px;
+        font-size: 12px;
     }
 }
 
@@ -282,6 +419,7 @@ body {
 
 .column > a > .applytodrive:hover {
     background-image: linear-gradient(360deg,#F5F5F5, #EEEEEE);
+    transition: all .5s ease-in-out;
 }
 
 .column > a > .signuptoride {
@@ -294,6 +432,7 @@ body {
 
 .column > a > .signuptoride:hover {
     background-image: linear-gradient(360deg,#EC407A, #E91E63);
+    transition: all .5s ease-in-out;
 }
 
 .row {
@@ -304,7 +443,7 @@ body {
     margin-bottom: 50px;
     margin-left: 50px;
     margin-right: 50px;
-    box-shadow: 0px 1px 10px rgba(0,0,0,0.1);
+    box-shadow: 0px 1% 1% rgba(0,0,0,0.1);
     background-image:  linear-gradient(180deg, #FAFAFA, #F5F5F5);
     background-size: cover;
     border-radius: 20px;
@@ -390,6 +529,7 @@ body {
     text-align: center;
     border-top: 1px #d4d4d4 solid;
     background-image: linear-gradient(180deg, #FAFAFA, white);
+    z-index: 1;
 }
 
 .bottom-container > span {
