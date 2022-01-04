@@ -35,13 +35,13 @@ body {
     padding-right: 10px; 
     width: 100%;
     box-shadow: 0px 1px 10px rgba(0,0,0,0.1);
-    background-image: linear-gradient(180deg, rgba(255,255,255,0.75), rgba(245,245,245,0.75)); 
+    background-image: linear-gradient(180deg, rgba(255,255,255,0.7), rgba(250,250,250,0.7)); 
     position: fixed;
     top: 0;
     z-index: 1;
     border-bottom: 1px #d4d4d4 solid;
-    backdrop-filter: blur(35px);
-    -webkit-backdrop-filter: blur(35px);
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(30px);
 }
   
 .nav > .nav-header {
@@ -76,7 +76,7 @@ body {
 }
   
 .nav > .nav-links > a:hover {
-    color: #F06292;
+    color: #00ACC1;
     border-radius: 15px;
 }
   
@@ -95,7 +95,7 @@ body {
 
 @media (max-width:650px) {
     .nav > .nav-btn > label:hover ~ span {
-        color: #de3e80;
+        color: #00ACC1;
     }
 }
 
@@ -108,7 +108,7 @@ body {
 }
     
 .nav > .nav-btn :hover > label ~ span {
-    color: #de3e80;
+    color: #00ACC1;
 }
 
 .nav > .nav-btn > label > span {
@@ -157,7 +157,7 @@ body {
 }
 
 #brand > a {
-    background-image: linear-gradient(180deg, #EC407A, #E91E63);
+    background-image: linear-gradient(180deg, #00BCD4, #00ACC1);
     font-weight: 900;
     font-size: 30px;
     text-decoration: none;
@@ -180,29 +180,30 @@ body {
 /* Home page's main content starts from here */
 
 .bg1 {
+    content: "";
+    display: flexbox;
     width: 100%;
     margin: auto;
     margin-top: 70px;
-    padding: 13%;
-    background-image: linear-gradient(180deg, rgba(0,0,0,0.3), rgba(0,0,0,0.6)), url(assets/Rear\ view\ from\ backseat\ of\ driver\ and\ passenger\ in\ car.svg);
+    padding: 10%;
+    background-image: url(assets/carpool_only_small-2a873c6cbe41aedde8f4b1b168cf9fd2.svg);
     background-position: center;
-    background-size:cover;
+    background-size: cover;
     background-repeat: no-repeat;
 }
 
 .bg1 > h1 {
-    background-image: linear-gradient(45deg, white, #FAFAFA, #F5F5F5);
-    font-size: 55px;
-    font-weight: 700;
+    content: "";
+    clear: both;
+    position: sticky;
+    color: white;
+    font-size: 60px;
+    font-weight: 900;
+    text-shadow: 0px 1px 5px rgba(0,0,0,0.1);
     text-align: center;
     letter-spacing: -3px;
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -moz-background-clip: text;
-    -moz-text-fill-color: transparent;
-    -ms-background-clip: text;
-    -ms-text-fill-color: transparent;
+    display: table;
+    width: 100%;
 }
 
 @media only screen and (max-width: 650px) {
@@ -225,17 +226,27 @@ body {
     }
 }
 
+.bg1 > .empty-area > span {
+    content: "";
+    clear: both;
+    position: sticky;
+    display: block;
+    padding-top: 8%;
+    padding-bottom: 5%; 
+}
+
 .bg1 > .ride-search-container {
     content: "";
     display: table;
     clear: both;
+    position: sticky;
     overflow: hidden;
     width: 100%;
     margin: auto;
-    padding: 10px;
-    border: 2px solid #424242;
+    padding: 8px;
     border-radius: 20px;
-    background-image:  linear-gradient(180deg, rgba(255,255,255,0.7), rgba(245,245,245,0.7));
+    background-image:  linear-gradient(180deg, rgba(255,255,255,0.5), rgba(245,245,245,0.5));
+    box-shadow: 0px 1px 5px rgba(0,0,0,0.1);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
 }
@@ -244,6 +255,7 @@ body {
     .bg1 > .ride-search-container {
         border: none;
         background-image: none;
+        box-shadow: none;
         backdrop-filter: none;
         -webkit-backdrop-filter: none;
     }
@@ -286,12 +298,12 @@ body {
 }
 
 .bg1 > .ride-search-container > .content-width > input:hover {
-    outline: 2px solid #F48FB1;
+    outline: 2px solid #4DD0E1;
     transition: all .5s ease-in-out;
 }
 
 .bg1 > .ride-search-container > .content-width > input:focus {
-    outline: 2px solid #F06292;
+    outline: 2px solid #00BCD4;
     transition: all .5s ease-in-out;
 }
 
@@ -311,7 +323,7 @@ body {
     -webkit-backdrop-filter: blur(30px);
 }
 
-@media only screen and (max-width: 860px) {
+@media only screen and (max-width: 865px) {
     .bg1 > .ride-search-container > .content-width > input{
         margin-block: 5px;
         width: 60%;
@@ -330,13 +342,13 @@ body {
 }
 
 @media only screen and (max-width: 420px) {
-    .bg1 > .ride-search-container > .content-width > input{
+    .ride-search-container > .content-width > input{
         padding: 12px;
         font-size: 12px;
         width: 80%;
     }
 
-    .bg1 > .ride-search-container > .content-width > button {
+    .ride-search-container > .content-width > button {
         margin-top: 5px;
         width: 80%;
     }
@@ -344,7 +356,7 @@ body {
 }
 
 @media only screen and (max-width: 300px) {
-    .bg1 > .ride-search-container > .content-width > input{
+    .bg1 > .ride-search-container > .content-width > input {
         padding: 10px;
         font-size: 12px;
     }
@@ -360,7 +372,7 @@ body {
 
 .column > i {
     font-size: 35px;
-    background-image: linear-gradient(180deg, #F06292, #EC407A);
+    background-image: linear-gradient(180deg, #26C6DA, #00BCD4);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -427,11 +439,11 @@ body {
     border: 1px solid #757575;
     border-radius: 8px;
     padding: 14px;
-    background-image: linear-gradient(180deg, #F06292, #EC407A);
+    background-image: linear-gradient(180deg, #26C6DA, #00BCD4);
 }
 
 .column > a > .signuptoride:hover {
-    background-image: linear-gradient(360deg,#EC407A, #E91E63);
+    background-image: linear-gradient(360deg,#00BCD4, #00ACC1);
     transition: all .5s ease-in-out;
 }
 
@@ -443,7 +455,7 @@ body {
     margin-bottom: 50px;
     margin-left: 50px;
     margin-right: 50px;
-    box-shadow: 0px 1% 1% rgba(0,0,0,0.1);
+    box-shadow: 0px 1px 10px rgba(0,0,0,0.1);
     background-image:  linear-gradient(180deg, #FAFAFA, #F5F5F5);
     background-size: cover;
     border-radius: 20px;
@@ -543,7 +555,7 @@ body {
 .bottom-container> p {
     font-size: 20px;
     font-weight: 900;
-    color: #EC407A;
+    color: #00BCD4;
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 1.5px;
@@ -601,7 +613,7 @@ i:hover {
 }
 
 .loginui > h1 {
-    background-image: linear-gradient(180deg, #EC407A, #E91E63);
+    background-image: linear-gradient(180deg, #00BCD4, #00ACC1);
     color: #FAFAFA;
     border-radius: 8px;
     font-weight: 900;
@@ -662,12 +674,13 @@ i:hover {
 }
 
 input:hover {
-    border: 1px solid #F48FB1;
+    outline: 2px solid #4DD0E1;
+    transition: all .5s ease-in-out;
 }
 
 input:focus {
-    outline: none;
-    border: 1px solid #EC407A;
+    outline: 2px solid #00BCD4;
+    transition: all .5s ease-in-out;
 }
 
 @media screen and (max-width: 385px) {
@@ -688,7 +701,7 @@ button {
 
 .gobackbtn {
     padding: 11px;
-    background-color: rgba(0,0,0,0);
+    background-image: linear-gradient(180deg,#FAFAFA, #F5F5F5);
     color: #424242;
     border: 1px solid #d4d4d4;
     border-top-left-radius: 8px;
@@ -702,18 +715,18 @@ button {
 }
 
 .gobackbtn:hover {
-    background-image: linear-gradient(360deg,#FAFAFA, #F5F5F5);
+    background-image: linear-gradient(360deg, #F5F5F5, #EEEEEE);
 }
 
 .signupbtn {
     padding: 12px;
-    background-image: linear-gradient(180deg, #F06292, #EC407A);
+    background-image: linear-gradient(180deg, #26C6DA, #00BCD4);
     border-top-right-radius: 8px;
     border-bottom-right-radius: 8px;
 }
 
 .signupbtn:hover {
-    background-image: linear-gradient(360deg,#EC407A, #E91E63);
+    background-image: linear-gradient(360deg,#00BCD4, #00ACC1);
 }
 
 .clearfix::after {
