@@ -1,6 +1,6 @@
 * {
     box-sizing: border-box;
-    font-family: Inter, sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, Inter, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     scroll-behavior: smooth;
 
     font-kerning: normal;
@@ -32,40 +32,38 @@ body {
     height: 70px;
     padding: 8px;
     padding-left: 10px;
-    padding-right: 10px; 
+    padding-right: 10px;
     width: 100%;
-    box-shadow: 0px 1px 10px rgba(0,0,0,0.1);
-    background-image: linear-gradient(180deg, rgba(255,255,255,0.7), rgba(250,250,250,0.7)); 
+    background-color: rgba(255,255,255,0.8);
     position: fixed;
     top: 0;
     z-index: 1;
-    border-bottom: 1px #d4d4d4 solid;
-    backdrop-filter: blur(30px);
-    -webkit-backdrop-filter: blur(30px);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
 }
-  
+
 .nav > .nav-header {
     display: flex;
 }
-  
+
 .nav > .nav-header > .nav-title {
     display: inline-block;
     font-size: 30px;
     color: black;
     padding: 8px 10px 10px 10px;
 }
-  
+
 .nav > .nav-btn {
     display: none;
 }
-  
+
 .nav > .nav-links {
     display: inline;
     float: right;
     font-weight: 500;
     font-size: 20px;
 }
-  
+
 .nav > .nav-links > a {
     display: inline-block;
     padding: 8px 10px 13px 10px;
@@ -74,16 +72,16 @@ body {
     text-decoration: none;
     color: #212121;
 }
-  
+
 .nav > .nav-links > a:hover {
     color: #00ACC1;
     border-radius: 15px;
 }
-  
+
 .nav > #nav-check {
     display: none;
 }
-  
+
 @media (max-width:650px) {
     .nav > .nav-btn {
         display: inline-block;
@@ -106,7 +104,7 @@ body {
     height: 50px;
     padding: 50px;
 }
-    
+
 .nav > .nav-btn :hover > label ~ span {
     color: #00ACC1;
 }
@@ -127,11 +125,11 @@ body {
     display: flexbox;
     width: 100%;
     padding-left: 10px;
-    padding-top: 50px; 
+    padding-top: 50px;
     background-image:  linear-gradient(180deg, #FAFAFA, #F5F5F5);
     font-weight: 500;
     font-size: 20px;
-    text-align: left;  
+    text-align: left;
     height: 5%;
     overflow: hidden;
     transition: all .5s ease;
@@ -184,7 +182,6 @@ body {
     display: flexbox;
     width: 100%;
     margin: auto;
-    margin-top: 70px;
     padding: 10%;
     background-image: url(assets/carpool_only_small-2a873c6cbe41aedde8f4b1b168cf9fd2.svg);
     background-position: center;
@@ -232,16 +229,16 @@ body {
     position: sticky;
     display: block;
     padding-top: 8%;
-    padding-bottom: 5%; 
+    padding-bottom: 5%;
 }
 
-.bg1 > .ride-search-container {
+.bg1 > form > .ride-search-container {
     content: "";
     display: table;
     clear: both;
     position: sticky;
     overflow: hidden;
-    width: 100%;
+    width: 60%;
     margin: auto;
     padding: 8px;
     border-radius: 20px;
@@ -252,7 +249,7 @@ body {
 }
 
 @media only screen and (max-width: 650px) {
-    .bg1 > .ride-search-container {
+    .bg1 > form > .ride-search-container {
         border: none;
         background-image: none;
         box-shadow: none;
@@ -261,14 +258,14 @@ body {
     }
 }
 
-.bg1 > .ride-search-container > .content-width {
+.bg1 > form > .ride-search-container > .content-width {
     padding: 10px;
     text-align: center;
     width: 95%;
     margin: 0 auto;
 }
 
-.bg1 > .ride-search-container > .content-width > label > span {
+.bg1 > form > .ride-search-container > .content-width > label > span {
     margin-left: 5px;
     margin-right: 5px;
     color: #d4d4d4;
@@ -276,12 +273,12 @@ body {
 }
 
 @media only screen and (max-width: 908px) {
-    .bg1 > .ride-search-container > .content-width > label > span {
+    .bg1 > form > .ride-search-container > .content-width > label > span {
         display: none;
     }
 }
 
-.bg1 > .ride-search-container > .content-width > input {
+.bg1 > form > .ride-search-container > .content-width > input {
     padding: 10px;
     text-align: center;
     font-weight: 500;
@@ -297,17 +294,17 @@ body {
     -webkit-backdrop-filter: blur(10px);
 }
 
-.bg1 > .ride-search-container > .content-width > input:hover {
+.bg1 > form > .ride-search-container > .content-width > input:hover {
     outline: 2px solid #4DD0E1;
     transition: all .5s ease-in-out;
 }
 
-.bg1 > .ride-search-container > .content-width > input:focus {
+.bg1 > form > .ride-search-container > .content-width > input:focus {
     outline: 2px solid #00BCD4;
     transition: all .5s ease-in-out;
 }
 
-.bg1 > .ride-search-container > .content-width > button {
+.bg1 > form > .ride-search-container > .content-width > button {
     display: inline-block;
     padding: 10px;
     cursor: pointer;
@@ -322,37 +319,37 @@ body {
 }
 
 .ride-search-button {
-    background-image: linear-gradient(180deg, rgba(255,255,255,0.7), rgba(245,245,245,0.7));
+    background-color: rgba(250,250,250,0.7);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
 }
 
 @media only screen and (max-width: 865px) {
-    .bg1 > .ride-search-container > .content-width > input{
+    .bg1 > form > .ride-search-container > .content-width > input{
         margin-block: 5px;
         width: 60%;
     }
 
-    .bg1 > .ride-search-container > .content-width > button {
+    .bg1 > form > .ride-search-container > .content-width > button {
         margin-top: 5px;
         width: 60%;
     }
 }
 
 @media only screen and (max-width: 560px) {
-    .bg1 > .ride-search-container > .content-width > input {
+    .bg1 > form > .ride-search-container > .content-width > input {
         margin-block: 10px;
     }
 }
 
 @media only screen and (max-width: 420px) {
-    .ride-search-container > .content-width > input{
+    form > .ride-search-container > .content-width > input{
         padding: 12px;
         font-size: 12px;
         width: 80%;
     }
 
-    .ride-search-container > .content-width > button {
+    form > .ride-search-container > .content-width > button {
         margin-top: 5px;
         width: 80%;
     }
@@ -360,14 +357,14 @@ body {
 }
 
 @media only screen and (max-width: 300px) {
-    .bg1 > .ride-search-container > .content-width > input {
+    .bg1 > form > .ride-search-container > .content-width > input {
         padding: 10px;
         font-size: 12px;
     }
 }
 
 .column {
-    float: right;
+    float: left;
     width: 33.33%;
     padding: 50px;
     font-size: 20px;
@@ -375,7 +372,7 @@ body {
 }
 
 .column > i {
-    font-size: 35px;
+    font-size: 25px;
     background-image: linear-gradient(180deg, #26C6DA, #00BCD4);
     background-clip: text;
     -webkit-background-clip: text;
@@ -384,7 +381,7 @@ body {
     -moz-text-fill-color: transparent;
     -ms-background-clip: text;
     -ms-text-fill-color: transparent;
-    cursor:default;
+    cursor: none;
 }
 
 .column > h3 {
@@ -422,33 +419,32 @@ body {
 .column > a > button {
     margin-top: -5px;
     padding: 15px;
+    box-shadow: 0px 1px 5px rgba(0,0,0,0.15);
 }
 
 .column > a > .applytodrive {
     cursor: pointer;
-    border: 1px solid #757575;
     border-radius: 8px;
-    padding: 15px;
     color: #424242;
     background-image: linear-gradient(180deg,#FAFAFA, #F5F5F5);
 }
 
 .column > a > .applytodrive:hover {
+    box-shadow: 0px 1px 6px rgba(0,0,0,0.2);
     background-image: linear-gradient(360deg,#F5F5F5, #EEEEEE);
-    transition: all .5s ease-in-out;
+    transition: all .1s ease-in-out;
 }
 
 .column > a > .signuptoride {
     cursor: pointer;
-    border: 1px solid #757575;
     border-radius: 8px;
-    padding: 14px;
     background-image: linear-gradient(180deg, #26C6DA, #00BCD4);
 }
 
 .column > a > .signuptoride:hover {
+    box-shadow: 0px 1px 6px rgba(0,0,0,0.2);
     background-image: linear-gradient(360deg,#00BCD4, #00ACC1);
-    transition: all .5s ease-in-out;
+    transition: all .1s ease-in-out;
 }
 
 .row {
@@ -463,7 +459,7 @@ body {
     background-image:  linear-gradient(180deg, #FAFAFA, #F5F5F5);
     background-size: cover;
     border-radius: 20px;
-    border: 1px solid #d4d4d4;
+
 }
 
 @media screen and (max-width: 1040px) {
@@ -527,7 +523,80 @@ body {
         margin: auto;
         padding-top: 50px;
         background-image: linear-gradient(180deg, #FAFAFA, #F5F5F5);
-        border: none;
+    }
+}
+
+.content {
+    display: flex;
+    width: 100%;
+    overflow: auto;
+    letter-spacing: -0.5px;
+}
+
+.content > p {
+    text-align: left;
+    color: #424242;
+    margin-top: 1%;
+    margin-bottom: 6%;
+    margin-left: 6%;
+    margin-right: 6%;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: -1px;
+}
+
+.user-rating-container {
+    content: "";
+    clear: both;
+    display: table;
+    width: 100%;
+    border-top: 1px #d4d4d4 solid;
+    background-image:  linear-gradient(180deg, #F5F5F5, #FAFAFA, white);
+    background-size: cover;
+}
+
+.user-rating-container > h1 {
+    display: block;
+    font-size: 40px;
+    font-weight: 800;
+    letter-spacing: -3px;
+    margin-top: 3%;
+    margin-left: 6%;
+    text-align: left;
+    background-image: linear-gradient(180deg, #212121, black);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+    -ms-background-clip: text;
+    -ms-text-fill-color: transparent;
+}
+
+@media only screen and (max-width: 1000px) {
+    .content {
+        display: block;
+    }
+
+    .content > p {
+        text-align: center;
+    }
+
+    .user-rating-container > h1 {
+        text-align: center;
+        margin-left: 0;
+    }
+}
+
+@media only screen and (max-width: 370px) {
+    .content > p {
+        font-size: 18px;
+        letter-spacing: -0.8px;
+    }
+
+    .user-rating-container > h1 {
+        font-size: 30px;
+        letter-spacing: -2px;
     }
 }
 
@@ -544,6 +613,7 @@ body {
     padding: 20px;
     text-align: center;
     border-top: 1px #d4d4d4 solid;
+    border-bottom: 1px #d4d4d4 solid;
     background-image: linear-gradient(180deg, #FAFAFA, white);
     z-index: 1;
 }
@@ -578,23 +648,26 @@ i:hover {
 }
 
 .fas , .fab {
-    color: #424242;
+    color: #212121;
 }
 
 .fa-envelope:hover {
     color: #EF5350;
+    transition: all 1s cubic-bezier(0.755, 0.05, 0.855, 0.06);
 }
 
 .fa-github:hover {
     color: #AB47BC;
+    transition: all 1s cubic-bezier(0.755, 0.05, 0.855, 0.06);
 }
 
 .fa-telegram:hover {
     color: #42A5F5;
+    transition: all 1s cubic-bezier(0.755, 0.05, 0.855, 0.06);
 }
 
 /* For signup and login page */
-.loginui {
+form > .loginui {
     display: block;
     position: relative;
     box-sizing: border-box;
@@ -604,11 +677,12 @@ i:hover {
     border-radius: 8px;
     padding-left: 50px;
     padding-right: 50px;
-    margin: 5% auto 10% auto;
+    margin: auto;
+    top: 20vh;
 }
 
 @media screen and (max-width: 599px) {
-    .loginui {
+    form > .loginui {
         border: none;
         padding-left: 0px;
         padding-right: 0px;
@@ -616,7 +690,7 @@ i:hover {
     }
 }
 
-.loginui > h1 {
+form > .loginui > h1 {
     background-image: linear-gradient(180deg, #00BCD4, #00ACC1);
     color: #FAFAFA;
     border-radius: 8px;
@@ -630,24 +704,24 @@ i:hover {
     -moz-background-clip: text;
     -moz-text-fill-color: transparent;
     -ms-background-clip: text;
-    -ms-text-fill-color: transparent;  
+    -ms-text-fill-color: transparent;
 }
 
 @media screen and (max-width: 385px) {
-    .loginui > h1 {
+    form > .loginui > h1 {
         font-size: 34.5px;
         letter-spacing: -1.5px;
     }
 }
 
 @media screen and (max-width: 285px) {
-    .loginui > h1 {
+    form > .loginui > h1 {
         font-size: 30px;
         letter-spacing: -1px;
     }
 }
 
-.loginui > p {
+form > .loginui > p {
     letter-spacing: -2px;
     font-size: 25px;
     font-weight: 500;
@@ -655,20 +729,20 @@ i:hover {
 }
 
 @media screen and (max-width: 385px) {
-    .loginui > p {
+    form > .loginui > p {
         font-size: 24.5px;
         letter-spacing: -1.5px;
     }
 }
 
 @media screen and (max-width: 285px) {
-    .loginui > p {
+    form > .loginui > p {
         font-size: 20px;
         letter-spacing: -1px;
     }
 }
 
-.loginui > input {
+form > .loginui > input {
     width: 100%;
     border-radius: 8px;
     background-image: linear-gradient(180deg, white,#FAFAFA);
@@ -688,7 +762,7 @@ input:focus {
 }
 
 @media screen and (max-width: 385px) {
-    .loginui > input {
+    form > .loginui > input {
         padding: 5%;
     }
 }
@@ -709,7 +783,7 @@ button {
     border: 1px solid #d4d4d4;
     border-top-left-radius: 8px;
     border-bottom-left-radius: 8px;
-    
+
 }
 
 .gobackbtn , .signupbtn {
