@@ -7,8 +7,9 @@ session_start();
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;500;700;800;900&amp;display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <script src="main.js"></script>
     <link href="style1.css" rel="stylesheet">
     <title>ShareTheRide!</title>
     <link rel="icon" href="assets/STR!.svg" type="image/x-icon">
@@ -32,33 +33,24 @@ session_start();
     </div>
 
     <div style="margin-top: -46.4px;" class="nav-links">
-      <a href="./login.php">Login</a>
+      <a href="login.php">Login</a>
       <a href="signup.php">Signup</a>
       <a href="#about">About Us</a>
       <a href="#contactus">Contact Us</a>
     </div>
   </div>
 
-  <div style="margin-top: 70px;" class="bg1">
-    <h1>Let's ride together!</h1>
-    <div class="empty-area"><span></span></div>
-    <form action="phpSearch.php" method="post">
-    <div class="ride-search-container">
-      <div class="content-width">
-        <input type="text" name="search" id="search" placeholder="Leaving from"></button>
-          <label>
-            <span>|</span>
-          </label>
-        <input type="text" name="search" id="search" placeholder="Going to"></button>
-        <label>
-          <span>|</span>
-        </label>
-        <button class="ride-search-button"><i class="fas fa-search"></i></button>
-      </form>
-      </div>
-    </div>
-  </div>
+  <div style="margin-top: 70px;" class="bg1"></div>
 
+  <h1 class="heading">Hop in crack a window let's get back out there</h1>
+
+  <div class="ride-search-container">
+      <div class="content-width">
+        <input type="text" name="search" id="search"  placeholder="Going to">
+        <div id="display"></div>
+      </div>
+  </div>
+    <div id="display"></div>
   <div class="row">
     <div class="column">
       <i class="fas fa-coins"></i>
@@ -101,8 +93,6 @@ session_start();
 				<a href="#"><i class="fab fa-telegram"></i></a>
     </div>
   </div>
-  
-  <script src="main.js"></script>
   
 </body>
 </html>
