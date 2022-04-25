@@ -1,16 +1,18 @@
+//Disables context menu
 window.addEventListener('contextmenu', function (e) {
     e.preventDefault();
 }, false);
 
+//display search results
 function fill(Value) {
-    $('#search').val(Value);
+    $('#pickup').val(Value);
     $('#display').hide();
  }
  
  $(document).ready(function() {
-    $("#search").keyup(function() {
-        var search = $('#search').val();
-       if (search == "") {
+    $("#pickup").keyup(function() {
+        var pickup = $('#pickup').val();
+       if (pickup == "") {
            $("#display").html("");
        }
        else {
@@ -18,7 +20,7 @@ function fill(Value) {
                type: "POST",
                url: "phpSearch.php",
                data: {
-                   search: search
+                    pickup: pickup
                },
                success: function(html) {
                    $("#display").html(html).show();

@@ -1,6 +1,19 @@
 <!DOCTYPE html>
 <?php
+
 session_start();
+
+if (!isset($_SESSION['username'])) {
+    $_SESSION['msg'] = "You have to log in first";
+    header("location: login.php");
+
+}
+
+if (isset($_POST['logout'])) {
+    session_destroy();
+    unset($_SESSION['username']);
+    header("location: login.php");
+}
 ?>
 
 <html>
@@ -11,9 +24,12 @@ session_start();
     <script src="main.js"></script>
     <script src="main2.js"></script>
     <link href="style1.css" rel="stylesheet">
-    <title>sharetheride!</title>
-    <link rel="icon" href="/assets/STR!.svg" type="image/x-icon">
+    <title>ShareTheRide! / <?php echo $_SESSION['username']; ?></title>
+    <link rel="icon" href="assets/STR!.svg" type="image/x-icon">
 </head>
+
+<body>
+
   <div class="nav">
     <input type="checkbox" id="nav-check">
 
@@ -38,24 +54,57 @@ session_start();
     </div>
 
     <div style="margin-top: -46.4px;" class="nav-links">
-      <a href="login">Login</a>
-      <a href="signup">Signup</a>
       <a href="about.php">About Us</a>
       <a href="#contactus">Contact Us</a>
     </div>
   </div>
 
-  <div style="margin-top: 50px;" class="bg1"></div>
+  <?php if (isset($_SESSION['success'])) : ?>
+            <div class="error success" >
+                <h3>
+                    <?php
+                        echo $_SESSION['success'];
+                        unset($_SESSION['success']);
+                    ?>
+                </h3>
+            </div>
+    
+    <?php endif ?>
+  
+    <?php  if (isset($_SESSION['username'])) : ?>
+    
+    <div style="height: 40px; margin-top: 50px; position: relative; background-color: rgb(245,250,255);">
+      <div style="height: 38px; display: flex; align-items: center; justify-content: center;">
+        <p style="font-weight: 700; color: #212121;">
+            Welcome
+            <?php echo $_SESSION['username']; ?>!
+        </p>
+
+        <span>
+          <?php session_destroy(); ?>
+          <a style="color: #00BCD4; text-decoration: none; font-weight: 700;" href="index.php?logout='1'">&NonBreakingSpace;Signout</a>
+        </span>
+
+      </div>
+    </div>
+ 
+    <?php endif ?>
+
+  <div class="bg1">
+    <div class="empty-area"><span></span></div>
+    </div>
+  </div>
 
   <h1 class="heading">Hop in crack a window let's get back out there</h1>
 
   <div class="ride-search-container">
       <div class="content-width">
-        <input type="text" name="destination" id="destination"  placeholder="&#xf002; Where are you going?">
-        <a href="signup.php"><div style="background-color: rgba(0,0,0,0);" id="display2"></div></a>
+        <input type="text" name="destination" id="destination" placeholder="Where are you going?" />
+        <div style="margin-top: 5px; background-color: rgba(0,0,0,0);" id="display2"></div>
       </div>
   </div>
-  <div class="row">
+
+  <div style="margin-top: 10px;" class="row">
     <div class="column">
       <i class="fas fa-coins"></i>
       <h3>Your pick of rides at low prices</h3>
@@ -68,8 +117,7 @@ session_start();
     </div>
     <div class="column">
       <h1>Let's ride</h1>
-      <a href="/login"><button class="login">Login</button></a>
-      <a href="/signup"><button class="signup">Signup</button></a>
+      <a href="#search"><button class="searchforride">Search for ride</button></a>
     </div>
   </div>
 
@@ -84,13 +132,13 @@ session_start();
 
       <figure class="slide">
         <blockquote class="testimonial">
-          <p>"My motto is very simple. It doesn't cost you a penny to be nice and kind, but it will cost you everything if you're not. If I'm free and somebody needs my help, I'll be the first one to jump in, in a heartbeat." <b>&nbsp;&nbsp;- Vaibhav</b></p>
+          <p>"My motto is very simple. It doesn't cost you a penny to be nice and kind, but it will cost you everything if you're not. If I'm free and somebody needs my help, I'll be the first one to jump in, in a heartbeat."<b>&nbsp;&nbsp;- Vaibhav</b></p>
         </blockquote>
       </figure>
 
       <figure class="slide">
         <blockquote class="testimonial">
-          <p>"I'm a disabled Marine Corps veteran, and because of my disability, I'm no longer able to work in a structured environment. The few hours a week that I drive connects me to my community and gives me extra money to help make ends meet." <b>&nbsp;&nbsp;- Ahmad</b></p>
+          <p>"I'm a disabled Marine Corps veteran, and because of my disability, I'm no longer able to work in a structured environment. The few hours a week that I drive connects me to my community and gives me extra money to help make ends meet."<b>&nbsp;&nbsp;- Ahmad</b></p>
         </blockquote>
       </figure>
 
@@ -110,13 +158,15 @@ session_start();
   </div>
 </section>
 
+
+
   <div id="contactus">
 		<div class="bottom-container">
       <span>
-        <label>© 2022 sharetheride!</label>
+        <label>© 2022 Vaibhav Pancholi</label>
       </span>
 			<p>Contact Us</p>
-			<a href="#"><i class="fas fa-envelope"></i></a>
+      <a href="#"><i class="fas fa-envelope"></i></a>
       <a href="#"><i class="fa-brands fa-facebook"></i></a>
       <a href="#"><i class="fa-brands fa-instagram-square"></i></a>
       <a href="#"><i class="fa-brands fa-twitter"></i></a>

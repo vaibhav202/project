@@ -10,7 +10,7 @@
     <link href="style1.css" rel="stylesheet">
     <script src="main.js"></script>
     <title>ShareTheRide! / Login</title>
-    <link rel="icon" href="assets/STR!.svg" type="image/x-icon">
+    <link rel="icon" href="/assets/STR!.svg" type="image/x-icon">
 </head>
 <body>
 <?php
@@ -21,13 +21,13 @@
         $username = mysqli_real_escape_string($con, $username);
         $password = stripslashes($_REQUEST['password']);
         $password = mysqli_real_escape_string($con, $password);
-        $query    = "SELECT * FROM `users` WHERE username='$username'
-                     AND password='" . md5($password) . "'";
+        $query    = "SELECT * FROM `tbl_users` WHERE username='" . $username . "'
+                     AND password='" . sha1($password) . "'";
         $result = mysqli_query($con, $query) or die(mysql_error());
         $rows = mysqli_num_rows($result);
         if ($rows == 1) {
             $_SESSION['username'] = $username;
-            header("Location: authenticated_user_page.php");
+            header("Location: session.php");
         } else {
             echo '<div style="font-size: 20px; height: 100vh; margin: auto; display: flex; align-items: center; align-self: center; justify-content: center; flex-direction: column;">
                   <h3 style="letter-spacing: -1px; font-weight: 500; margin-top: -10px;">Looks like you entered something wrong.</h3><br/>
@@ -40,14 +40,18 @@
 
     <form method="post">
         <div class="loginui">
-            <h1>ShareTheRide!</h1>
+            <h1>sharetheride!</h1>
             <p>Login to your account</p>
 
-            <input required type="text" name="username" placeholder="Enter email">
-            <input required type="password" name="password" placeholder="Enter password">
+            <input required type="text" name="username" placeholder="Enter username" />
+            <input required type="password" name="password" placeholder="Enter password" />
+
+            <div class="signuporlogininstead">
+                <a href="signup">Don't have an account?</a>
+            </div>
 
             <div class="clearfix">
-                <a href="index.php"><button class="gobackbtn" type="button">Go back</button></a>
+                <a href="index"><button class="gobackbtn" type="button">Go back</button></a>
                 <button class="signupbtn" type="submit">Next</button>
             </div>
         </div>
@@ -55,7 +59,5 @@
     <?php
     }
 ?>
-
 </body>
-
 </html>

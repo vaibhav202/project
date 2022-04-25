@@ -8,7 +8,7 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
-    <link href="style1.css" rel="stylesheet">
+    <link href="assets/style.css" rel="stylesheet">
     <script src="main.js"></script>
     <title>ShareTheRide! / Signup</title>
     <link rel="icon" href="/assets/STR!.svg" type="image/x-icon">
@@ -33,9 +33,8 @@ session_start();
         $result   = mysqli_query($con, $query);
         if ($result) {
             echo '<div style="font-size: 20px; height: 100vh; margin: auto; display: flex; align-items: center; align-self: center; justify-content: center; flex-direction: column;">
-                    <h2 style="color: #212121; letter-spacing: -1.5px; font-weight: 900">Welcome '.$name.'!</h2>
-                    <h3 style="letter-spacing: -1px; font-weight: 500; margin-top: -10px;">Your account created successfully.</h3>
-                    <span><a style="margin-top: -10px; font-weight: 800; color: #00BCD4; text-decoration: none;" href="index.php"><- Go back</a> <b>or</b> <a style="margin-top: -10px; font-weight: 800; color: #00BCD4; text-decoration: none;" href="login.php">Login -></a></span>
+                    <h2 style="color: #212121; letter-spacing: -1.5px; font-weight: 900">User '.$name.' added successfully!</h2>
+                    <span><a style="margin-top: -10px; font-weight: 800; color: #00BCD4; text-decoration: none;" href="index.php">Go to admin panel -></a></span>
                   </div>';
         } else {
             echo '<div style="font-size: 20px; font-weight: 800; height: 100vh; margin: auto; display: flex; align-items: center; align-self: center; justify-content: center; flex-direction: column;">
@@ -45,10 +44,11 @@ session_start();
         }
     } else {
 ?>
-<form method="post">
-        <div id="loginuibase" class="loginui">
-            <h1>sharetheride!</h1>
-            <p>Create your account</p>
+
+<div class="loginui">
+          <h1 style="margin-top: -10px;">sharetheride!</h1>
+          <p>Create your account</p>
+<form style="margin-top: -50px;" method="post">
 
                 <input required name="name" type="text" placeholder="Enter your name">
 
@@ -62,19 +62,15 @@ session_start();
 
                 <input type="hidden" name="roleid" value="3">
 
-            <div class="signuporlogininstead">
-                <a href="login">Already have an account?</a>
-            </div>
-
             <div class="clearfix">
                 <a href="index.php"><button class="gobackbtn" type="button">Go back</button></a>
                 <button class="signupbtn" type="submit">Next</button>
             </div>
-        </div>
 </form>
 <?php
     }
 ?>
+</div>  
 </body>
 
 </html>
